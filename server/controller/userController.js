@@ -63,7 +63,7 @@ export const getAllUsers = async (req, res) => {
 
 export const getUserStats = async (req, res) => {
   const date = new Date();
-  const lastYear = new Date(date.setFullYear(date.getUTCFullYear() - 1));
+  const lastYear = new Date(date.setFullYear(date.getFullYear() - 1));
 
   try {
     const data = await User.aggregate([
